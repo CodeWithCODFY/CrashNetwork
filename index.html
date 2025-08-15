@@ -68,8 +68,7 @@ header nav ul li a:hover {
   justify-content: center;
   text-align: center;
   min-height: 100vh;
-  background: url('https://cdn.discordapp.com/attachments/1355014296245112852/1405520827088371792/2025072917150244.jpg?ex=689f20c6&is=689dcf46&hm=bcacdbde92d2ea330c63aa89682a2d332f9bb237db4d3b6e3e6aa325b8b16a8a&') 
-    center/cover no-repeat;
+  /* background: url('https://cdn.discordapp.com/attachments/1355014296245112852/1405520827088371792/2025072917150244.jpg?ex=689f20c6&is=689dcf46&hm=bcacdbde92d2ea330c63aa89682a2d332f9bb237db4d3b6e3e6aa325b8b16a8a&') center/cover no-repeat; */
   padding: 2rem;
   margin-top: 2rem;
   overflow: hidden; /* prevent overlay bleed */
@@ -104,9 +103,8 @@ header nav ul li a:hover {
 
 
 .buttons {
-  margin-top: 3rem;
-  top: 15rem;
   align-content: center;
+  user-select: none;
 }
 
 button, .discord-btn {
@@ -125,7 +123,7 @@ button, .discord-btn {
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  margin-top: 70vh;
+  margin-bottom: 2rem;
   padding-bottom: 6px;
   display: flex;
   align-items: center;
@@ -147,11 +145,17 @@ button, .discord-btn {
 }
 
 .discord-btn {
+  top: -33rem;
+  left: 17rem;
   background: #5865F2;
   text-decoration: none;
+  position: relative;
+  display: inline-block;
 }
 
 .minecraft-info {
+  top: -33rem;
+  right: 21rem;
   display: inline-block;
   text-align: center;
   /* background: rgba(0,0,0,0.4); */
@@ -201,6 +205,31 @@ button, .discord-btn {
   visibility: visible;
   opacity: 1;
 }
+
+.welcome-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  margin-top: -3rem;
+  max-width: 900px;
+}
+
+.welcome-section h2 {
+  font-size: 2.5rem;
+  color: red;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+  margin-bottom: 1rem;
+}
+
+.welcome-section p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #ddd;
+  max-width: 750px;
+  margin: auto;
+}
+
 
     .gamemodes {
         margin-top: 5rem;
@@ -369,6 +398,7 @@ footer {
 
 #gam {
     position: relative;
+    top: -5rem;
 }
 
   </style>
@@ -391,11 +421,20 @@ footer {
      <div class="banner">
             <!-- Banner image -->
         <div class="banner-image"></div>
-            <!-- <h1 class="server-name">Crash Network</h1> -->
+            <h1 class="server-name"><a href="#" rel="noopener noreferrer"><img src="img/1000003689-removebg-preview.png" alt=""></a></h1>
+            <section id="welcome-section" class="welcome-section">
+  <h2>Welcome to CrashNetwork</h2>
+  <p>
+    CrashNetwork is a premium Minecraft community offering exciting gamemodes, 
+    friendly players, and unforgettable adventures. Whether you want to battle 
+    in Bedwars, survive the wilderness, or steal hearts in Lifesteal, we've got 
+    something for everyone!
+  </p>
+</section>
             <div class="buttons">
               <div class="minecraft-info" id="copyInfo">
                 <div class="player-count" id="playerCount">Loading...</div>
-                <div class="server-ip" id="serverIp">play.crashnet.fun</div>
+                <div class="server-ip" id="serverIp">...</div>
                 <div class="tooltip" id="tooltip">Click to copy</div>
               </div>
            
@@ -408,6 +447,10 @@ footer {
       </div>
 
 <div id="gam"></div>
+
+  <!-- Main content -->
+
+
     <!-- Gamemodes -->
     <section id="gamemodes" class="gamemodes">
     
@@ -451,7 +494,7 @@ footer {
   <!-- Contact -->
   <section id="contact">
   <h2>Contact Us</h2>
-  <p>Email: <a href="mailto:contact@server.com">contact@server.com</a></p>
+  <p>Email: <a href="mailto:support@crashnet.fun">support@crashnet.fun</a></p>
   </section>
 
   <footer>
