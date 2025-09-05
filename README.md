@@ -12,8 +12,7 @@ It provides players with information about the server, live player counts, gamem
 - 📜 **Welcome section** with styled server description  
 - 🕹️ **Game Modes showcase** with hover effects  
 - 🛒 **Store section** with product previews  
-- 📞 **Contact section** with email support  
-- 📱 Fully **responsive** design for desktop and mobile  
+- 📞 **Contact section** with email support 
 
 ---
 
@@ -25,7 +24,7 @@ It provides players with information about the server, live player counts, gamem
 ---
 
 ## Status
-- Not fully developed!
+- Not fully developed (Might break for smaller screens)!
 
 ---
 
@@ -67,12 +66,14 @@ The server IP is fetched via:
   ├── README.md          # Project documentation
   ```
 ## 📸 Preview
+<img width="1920" height="1000" alt="image" src="https://github.com/user-attachments/assets/c795ce77-4fe1-43f1-934e-12096ea3390d" />
 
 
 ## 📬 Contact
 Discord: [Join My Discord Server!](https://dsc.gg/code-with-codfy)
+
 Email: support@crashnet.fun
 
-📜 License
+## 📜 License
 This project is licensed under the MIT License.
 Feel free to use and modify for your own Minecraft server website! 🎉
