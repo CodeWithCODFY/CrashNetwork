@@ -72,7 +72,7 @@ The server IP is fetched via:
 ## 📬 Contact
 Discord: [Join My Discord Server!](https://dsc.gg/code-with-codfy)
 
-Email: support@crashnet.fun
+Email: rishav.codfy2013@gmail.com
 
 ## 📜 License
 This project is licensed under the MIT License.
