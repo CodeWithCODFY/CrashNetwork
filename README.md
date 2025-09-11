@@ -24,26 +24,31 @@ It provides players with information about the server, live player counts, gamem
 ---
 
 ## Status
-- Not fully developed (Might break for smaller screens)!
+- Not fully developed!
+  - Store not developed.
+  - might break for smaller screens!
 
 ---
 
 ## ⚡ Setup
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/crashnetwork-website.git
+   git clone https://github.com/CodeWithCODFY/CrashNetwork.git
    ```
-2. Open the project folder:
+2. Extact the file.
+3. Open the project folder:
    ```bash
-   cd crashnetwork-website
+   cd crashnetwork-main
    ```
-3. Open index.html in your browser (or use a live server extension in VS Code).
+4. Change [your_erver_ip], [your_server_name] etc. to your name, server ip etc.
+5. The default theme is red. You can change it to your liking.
+6. Open index.html in your browser (or use a live server extension in VS Code).
 
 ## 🌍 Live Player Count
 The server IP is fetched via:
 
   ```js
-  fetch(`https://api.mcsrvstat.us/2/play.crashnet.fun`)
+  const serverIP = "[your_ip]"; // Replace with your IP
   ```
 - Displays current online players
 
