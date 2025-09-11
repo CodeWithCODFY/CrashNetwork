@@ -3,20 +3,64 @@
   src: url('./Minecraft.ttf');
 }
 
+/* ==========================
+   THEME VARIABLES
+   ========================== */
+:root {
+  --font-main: 'Minecraft', sans-serif;
+
+  /* Backgrounds */
+  --color-bg-main: #020301;
+  --color-bg-header: rgba(0, 0, 0, 0.6);
+  --color-bg-banner-overlay-top: rgba(0, 0, 0, 0.85);
+  --color-bg-banner-overlay-mid: rgba(0, 0, 0, 0.6);
+  --color-bg-banner-overlay-bottom: rgba(0, 0, 0, 0);
+  --color-bg-scroll-btn: #303030;
+  --color-bg-scroll-btn-hover: rgba(64, 64, 64, 0.575);
+  --color-bg-welcome: rgba(0, 0, 0, 0.3);
+  --color-bg-card: #1a1a1a;
+  --color-bg-store-link: #ff1616;
+  --color-bg-store-link-hover: #ae2727;
+  --color-bg-footer: #0000008a;
+
+  /* Text colors */
+  --color-text-main: #fff;
+  --color-text-muted: #ddd;
+  --color-text-link: #fff;
+  --color-text-link-hover: red;
+  --color-text-shadow-hover: #ff4444ee;
+  --color-heading: red;
+  --color-readmore: #fd3939;
+  --color-readmore-hover: #ae2727;
+  --color-discord-btn: #5865F2;
+
+  /* Player count */
+  --color-player-count: #ff0000;
+  --color-player-offline: #ff5555;
+  --color-player-error: #ffaa00;
+
+  /* Tooltip */
+  --color-tooltip-bg: rgba(0, 0, 0, 0.85);
+  --color-tooltip-text: #fff;
+}
+
+/* ==========================
+   BASE STYLES
+   ========================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Minecraft', sans-serif;
+  font-family: var(--font-main);
 }
 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: #020301;
-  color: #fff;
+  background: var(--color-bg-main);
+  color: var(--color-text-main);
 }
 
 header {
@@ -24,8 +68,8 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(6px); /* glassy effect */
+  background: var(--color-bg-header);
+  backdrop-filter: blur(6px);
   z-index: 999;
 }
 
@@ -44,7 +88,7 @@ header nav ul {
 }
 
 header nav ul li a {
-  color: #fff;
+  color: var(--color-text-link);
   text-decoration: none;
   font-weight: bold;
   font-size: 1rem;
@@ -53,23 +97,24 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-  color: red;
-  text-shadow: 0 0 8px #ff4444ee;
+  color: var(--color-text-link-hover);
+  text-shadow: 0 0 8px var(--color-text-shadow-hover);
 }
 
-
+/* ==========================
+   BANNER
+   ========================== */
 .banner {
-  position: relative; /* Needed for ::before overlay positioning */
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   min-height: 100vh;
-  /* background: url('https://cdn.discordapp.com/attachments/1355014296245112852/1405520827088371792/2025072917150244.jpg?ex=689f20c6&is=689dcf46&hm=bcacdbde92d2ea330c63aa89682a2d332f9bb237db4d3b6e3e6aa325b8b16a8a&') center/cover no-repeat; */
   padding: 2rem;
   margin-top: 2rem;
-  overflow: hidden; /* prevent overlay bleed */
+  overflow: hidden;
 }
 
 .banner::before {
@@ -80,39 +125,31 @@ header nav ul li a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: 
-    linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.85) 0%,   /* very dim at top */
-      rgba(0, 0, 0, 0.6) 50%,   /* still dim halfway */
-      rgba(0, 0, 0, 0) 100%     /* fades to visible at bottom */
-    );
+  background: linear-gradient(
+    to top,
+    var(--color-bg-banner-overlay-top) 0%,
+    var(--color-bg-banner-overlay-mid) 50%,
+    var(--color-bg-banner-overlay-bottom) 100%
+  );
   pointer-events: none;
 }
 
 .banner > * {
-  position: relative; /* keeps text above overlay */
+  position: relative;
 }
 
 .banner-image {
   display: none;
 }
 
-.server-name{
-  animation: bounce 1.5s infinite;;
+.server-name {
+  animation: bounce 1.5s infinite;
 }
 
 @keyframes bounce {
-  0% {
-    transform: translateY(0px);
-}
-50% {
-    transform: translateY(3px);
-}
-
-100% {
-    transform: translateY(0px);
-}
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(3px); }
+  100% { transform: translateY(0px); }
 }
 
 .buttons {
@@ -121,8 +158,7 @@ header nav ul li a:hover {
 }
 
 button, .discord-btn {
-  /* background: #00c853; */
-  color: white;
+  color: var(--color-text-main);
   border: none;
   padding: 0.6rem 1.2rem;
   margin: 0.3rem;
@@ -131,8 +167,17 @@ button, .discord-btn {
   border-radius: 5px;
 }
 
+.discord-btn {
+  top: -33rem;
+  left: 17rem;
+  background: var(--color-discord-btn);
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
 .scroll-down {
-  background-color: #303030;
+  background-color: var(--color-bg-scroll-btn);
   width: 40px;
   height: 40px;
   border-radius: 10px;
@@ -148,7 +193,7 @@ button, .discord-btn {
 }
 
 .scroll-down:hover {
-  background-color: rgba(64, 64, 64, 0.575);
+  background-color: var(--color-bg-scroll-btn-hover);
 }
 
 @keyframes bounce-scroll {
@@ -157,25 +202,17 @@ button, .discord-btn {
   60% { transform: translateY(-5px); }
 }
 
-.discord-btn {
-  top: -33rem;
-  left: 17rem;
-  background: #5865F2;
-  text-decoration: none;
-  position: relative;
-  display: inline-block;
-}
-
+/* ==========================
+   SERVER INFO
+   ========================== */
 .minecraft-info {
   top: -33rem;
   right: 21rem;
   display: inline-block;
   text-align: center;
-  /* background: rgba(0,0,0,0.4); */
   padding: 12px 20px;
   border-radius: 8px;
-  /* border: 2px solid #00ff00; */
-  font-family: 'Minecraft', monospace;
+  font-family: var(--font-main);
   cursor: pointer;
   position: relative;
 }
@@ -184,12 +221,13 @@ button, .discord-btn {
   margin-right: 50px;
   font-size: 24px;
   font-weight: bold;
-  color: #ff0000;
-  text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
+  color: var(--color-player-count);
+  text-shadow: 0 0 5px var(--color-player-count), 0 0 10px var(--color-player-count);
 }
+
 .server-ip {
   font-size: 14px;
-  color: #fff;
+  color: var(--color-text-main);
   margin-top: 4px;
   transition: all 0.3s ease;
 }
@@ -200,8 +238,8 @@ button, .discord-btn {
 
 .tooltip {
   visibility: hidden;
-  background: rgba(0, 0, 0, 0.85);
-  color: #fff;
+  background: var(--color-tooltip-bg);
+  color: var(--color-tooltip-text);
   font-size: 12px;
   padding: 3px 8px;
   border-radius: 4px;
@@ -214,15 +252,19 @@ button, .discord-btn {
   opacity: 0;
   transition: opacity 0.2s ease;
 }
+
 .minecraft-info:hover .tooltip {
   visibility: visible;
   opacity: 1;
 }
 
+/* ==========================
+   WELCOME SECTION
+   ========================== */
 .welcome-section {
   padding: 4rem 2rem;
   text-align: center;
-  background: rgba(0, 0, 0, 0.3);
+  background: var(--color-bg-welcome);
   border-radius: 12px;
   margin-top: -3rem;
   max-width: 900px;
@@ -230,7 +272,7 @@ button, .discord-btn {
 
 .welcome-section h2 {
   font-size: 2.5rem;
-  color: red;
+  color: var(--color-heading);
   text-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
   margin-bottom: 1rem;
 }
@@ -238,89 +280,92 @@ button, .discord-btn {
 .welcome-section p {
   font-size: 1.2rem;
   line-height: 1.8;
-  color: #ddd;
+  color: var(--color-text-muted);
   max-width: 750px;
   margin: auto;
 }
 
+/* ==========================
+   GAMEMODES
+   ========================== */
+.gamemodes {
+  margin-top: 5rem;
+}
 
-    .gamemodes {
-        margin-top: 5rem;
-    }
+.gamemodes h2 {
+  text-align: center;
+  font-size: 28px;
+}
 
+.game-modes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
 
-    .gamemodes h2 {
-        text-align: center;
-        font-size: 28px;
-        
-    }
-    
-    .game-modes {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 20px;
-        padding: 20px;
-    }
+.card {
+  text-align: center;
+  background: var(--color-bg-card);
+  border-radius: 15px;
+  overflow: visible;
+  width: 250px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
 
-    .card {
-        text-align: center;
-        background: #1a1a1a;
-        border-radius: 15px;
-        overflow: visible; /* Prevent hover cut-off */
-        width: 250px;
-        padding: 20px;
-        transition: all 0.3s ease;
-    }
+.card:nth-child(1) {
+  margin-top: 8px;
+  transform: rotate(-2deg);
+}
 
-    .card:nth-child(1){
-        margin-top: 8px;
-        transform: rotate(-2deg);
-    }
+.card:nth-child(3) {
+  margin-top: 8px;
+  transform: rotate(2deg);
+}
 
-    .card:nth-child(3){
-        margin-top: 8px;
-        transform: rotate(2deg);
-    }
-    
-    .card:nth-child(1):hover {
-        margin-bottom: -16px;
-        transform: translateY(-15px);
-    }
+.card:nth-child(1):hover {
+  margin-bottom: -16px;
+  transform: translateY(-15px);
+}
 
-    .card:nth-child(2):hover {
-        transform: translateY(-10px);
-    }
+.card:nth-child(2):hover {
+  transform: translateY(-10px);
+}
 
-    .card:nth-child(3):hover {
-        margin-bottom: -16px;
-        transform: translateY(-15px);
-    }
+.card:nth-child(3):hover {
+  margin-bottom: -16px;
+  transform: translateY(-15px);
+}
 
-    .card img {
-        width: 25%;
-        border-radius: 10px;
-    }
+.card img {
+  width: 25%;
+  border-radius: 10px;
+}
 
-    .card h3 {
-        margin-bottom: 220px; /* Added space between title and button */
-        font-size: 20px;
-    }
+.card h3 {
+  margin-bottom: 220px;
+  font-size: 20px;
+}
 
-    .read-more {
-        display: inline-block;
-        margin-top: 8px;
-        padding: 8px 15px;
-        color: #fd3939;
-        border-radius: 5px;
-        text-decoration: none;
-        transition: all 0.5s ease;
-    }
+.read-more {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 15px;
+  color: var(--color-readmore);
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
 
-    .read-more:hover {
-        color: #ae2727;
-    }
+.read-more:hover {
+  color: var(--color-readmore-hover);
+}
 
+/* ==========================
+   STORE
+   ========================== */
 .store {
   padding: 4rem 2rem;
   text-align: center;
@@ -360,28 +405,30 @@ button, .discord-btn {
   display: inline-block;
   margin-top: 2rem;
   padding: 10px 20px;
-  background: #ff1616;
-  color: white;
+  background: var(--color-bg-store-link);
+  color: var(--color-text-main);
   border-radius: 5px;
   text-decoration: none;
   transition: background 0.3s ease;
 }
 
 .store-link:hover {
-  background: #ae2727;
+  background: var(--color-bg-store-link-hover);
 }
 
-
+/* ==========================
+   CONTACT
+   ========================== */
 #contact {
   padding: 4rem 2rem;
-  background: #020301; /* darker to separate from other sections */
+  background: var(--color-bg-main);
   text-align: center;
 }
 
 #contact h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: red; /* green accent */
+  color: var(--color-heading);
 }
 
 #contact p {
@@ -397,19 +444,20 @@ button, .discord-btn {
 }
 
 #contact a:hover {
-  text-shadow: 0 0 6px #ff4444ee;
-  color: red;
+  text-shadow: 0 0 6px var(--color-text-shadow-hover);
+  color: var(--color-heading);
 }
 
-
-
+/* ==========================
+   FOOTER
+   ========================== */
 footer {
   padding: 2rem;
-  background: #0000008a;
+  background: var(--color-bg-footer);
   text-align: center;
 }
 
 #gam {
-    position: relative;
-    top: -5rem;
+  position: relative;
+  top: -5rem;
 }
