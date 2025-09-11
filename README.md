@@ -62,7 +62,7 @@ The server IP is fetched via:
   │   ├── keys.jpg
   │   └── logo.png
   ├── index.html         # Main website file
-  ├── style.css          # Styles (if extracted)
+  ├── style.css          # Styles 
   ├── README.md          # Project documentation
   ```
 ## 📸 Preview
