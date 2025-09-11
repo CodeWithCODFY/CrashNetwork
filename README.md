@@ -26,7 +26,7 @@ It provides players with information about the server, live player counts, gamem
 
 ---
 
-## Status
+## 📊 Status
 - Not fully developed!
   - Store not developed.
   - might break for smaller screens!
