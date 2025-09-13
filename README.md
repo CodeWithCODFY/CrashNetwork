@@ -5,6 +5,14 @@ It provides players with information about the server, live player counts, gamem
 
 ---
 
+## 📑 Table of Contents
+- [🚀 Features](#-features)
+- [📂 Project Structure](#-project-structure)
+- [📜 License](#-license)
+- [⚠️ Note](#️-note)
+
+---
+
 ## 🚀 Features
 - 🎨 **Modern UI** with a glassy navigation bar and smooth animations  
 - 🎮 **Live player count** using the [mcsrvstat.us API](https://api.mcsrvstat.us/)  
