@@ -28,7 +28,7 @@ It provides players with information about the server, live player counts, gamem
 ## 📊 Status
 - Not fully developed!
   - Store not developed.
-  - might break for smaller screens!
+  - Might break for smaller screens!
 
 ---
 
@@ -56,6 +56,7 @@ Default is Red. See in `style.css`:
   --color-primary: #ff1616;
   --color-primary-dark: #ae2727;
   --color-accent: #5865F2;
+  ...
 }
 ```
 Change these variables to instantly update the site’s look.
