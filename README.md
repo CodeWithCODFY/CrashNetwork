@@ -1,7 +1,6 @@
 # 🌐 CrashNetwork Website
 
 ![Status](https://img.shields.io/badge/status-not%20fully%20developed-orange?style=for-the-badge)
-![License](https://img.shields.io/badge/license-CC%20BY%202.0-blue?style=for-the-badge)
 
 This is the template website for **CrashNetwork**, made for a client of mine!  
 It provides players with information about the server, live player counts, gamemodes, store links, and contact details.
@@ -104,10 +103,8 @@ Email: rishav.codfy2013@gmail.com
 
 ## 📜 License
 
-This project is licensed under Creative Commons Attribution 2.0 (CC BY 2.0).
-You’re free to share and adapt, but attribution is required.
-
-More info: [CC BY 2.0 License](https://creativecommons.org/licenses/by/2.0/)
+The server does not belong to me and don't own. It belongs to its respective owners.
+I am just creating a template for the website to get feedback and to contribute.
 
 ---
 
