@@ -1,5 +1,7 @@
 # 🌐 CrashNetwork Website
 
+![Status](https://img.shields.io/badge/status-not%20fully%20developed-orange?style=for-the-badge)
+
 This is the template website for **CrashNetwork**, made for a client of mine!  
 It provides players with information about the server, live player counts, gamemodes, store links, and contact details.
 
@@ -31,10 +33,10 @@ It provides players with information about the server, live player counts, gamem
 
 ---
 
-## Status
+## 📊 Status
 - Not fully developed!
   - Store not developed.
-  - might break for smaller screens!
+  - Might break for smaller screens!
 
 ---
 
@@ -49,8 +51,23 @@ It provides players with information about the server, live player counts, gamem
    cd crashnetwork-main
    ```
 4. Change [your_erver_ip], [your_server_name] etc. to your name, server ip etc.
-5. The default theme is red. You can change it to your liking.
 6. Open index.html in your browser (or use a live server extension in VS Code).
+
+## 🎨 Theming
+This project uses **CSS variables** so you can quickly change the entire color theme.  
+Default is Red. See in `style.css`:
+
+```css
+:root {
+  --color-bg: #020301;
+  --color-text: #ffffff;
+  --color-primary: #ff1616;
+  --color-primary-dark: #ae2727;
+  --color-accent: #5865F2;
+  ...
+}
+```
+Change these variables to instantly update the site’s look.
 
 ## 🌍 Live Player Count
 The server IP is fetched via:
@@ -78,15 +95,29 @@ The server IP is fetched via:
   ├── style.css          # Styles 
   ├── README.md          # Project documentation
   ```
+
+---
+
 ## 📸 Preview
 <img width="1920" height="1000" alt="image" src="https://github.com/user-attachments/assets/c795ce77-4fe1-43f1-934e-12096ea3390d" />
 
+---
 
 ## 📬 Contact
 Discord: [Join My Discord Server!](https://dsc.gg/code-with-codfy)
 
 Email: rishav.codfy2013@gmail.com
 
+---
+
 ## 📜 License
-This project is licensed under the MIT License.
-Feel free to use and modify for your own Minecraft server website! 🎉
+
+The server does not belong to me and don't own. It belongs to its respective owners.
+I am just creating a template for the website to get feedback and to contribute.
+
+---
+
+## ⚠️ Note
+
+This project is still in development. Expect new features, bug fixes, and refinements.
+Contributions, suggestions, and ideas are always welcome!
